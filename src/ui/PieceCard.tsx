@@ -1,4 +1,4 @@
-import { ChromaticsShowcase } from "./ChromaticShowcase"
+import { ChromaticsShowcase } from "./ChromaticsShowcase"
 import { Piece } from '../utils/types'
 import { applyStylish } from '../utils/funcs'
  
