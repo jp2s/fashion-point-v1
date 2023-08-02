@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Piece } from './utils/types'
+import { PieceCardGrid } from './ui/PieceCard'
+import { Header } from './ui/Header'
+import { applyStylish } from "./utils/funcs"
+import { data as items} from './utils/data'
 
-function App() {
+const data: Array<Piece> = [...items, ...items, ...items]
+
+const stylish = applyStylish({
+  wrapper: ["container", "centerCenter", "column", "l0Container"],
+})
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className={stylish.wrapper}>
+      <Header />
 
-export default App;
+      <PieceCardGrid items={data} />
+    </div>
+  )
+}
