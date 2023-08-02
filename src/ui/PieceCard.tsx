@@ -1,3 +1,4 @@
+import { ChromaticsShowcase } from "./ChromaticShowcase"
 import { Piece } from '../utils/types'
 import { applyStylish } from '../utils/funcs'
  
@@ -30,6 +31,7 @@ const PieceCard = ({ piece }: PieceCardProps) => {
   const {
     label,
     acquiredFrom,
+    chromatics,
     price,
     acquiredAt,
     category,
@@ -38,11 +40,11 @@ const PieceCard = ({ piece }: PieceCardProps) => {
 
   return (
     <div className={stylish.pieceCardContainer}>
+      <ChromaticsShowcase chromatics={chromatics} />
+
       <Property name="Label" value={label} />
       
       <Property name="Acquired from" value={acquiredFrom} />
-      
-      {/* add component for colors */}
 
       {/* add component for details */}
       
@@ -59,7 +61,7 @@ const PieceCard = ({ piece }: PieceCardProps) => {
       )}
       
       <Property name="Kind" value={kind} />
-
+      
       <Property name="Category" value={category} />
     </div>
   )

@@ -9,6 +9,12 @@ html {
 
 /* UI */
 
+.chromatic {
+  width: 50px;
+  height: 15px;
+  border-radius: 5px; 
+}
+
 .headline {
   border-bottom: 12px solid hotpink;
 }

@@ -1,3 +1,5 @@
+import { RGB as Color } from 'color-name'
+
 const cx = (classNames: Array<string>) => classNames.join(" ")
 
 export const applyStylish = (stylish: Record<string, Array<string>>): Record<string, string> => {
@@ -9,3 +11,5 @@ export const applyStylish = (stylish: Record<string, Array<string>>): Record<str
 
   return result
 }
+
+export const stylishChromatic = (chromatic: Color) => `rgb(${chromatic.toString()})`

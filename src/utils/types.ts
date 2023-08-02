@@ -1,7 +1,9 @@
+import { RGB as Color } from "color-name"
+
 export interface BasePiece {
   label: string
   acquiredFrom: string
-  colors: Array<string>
+  chromatics: Array<Color>
   details: Array<string>
   price?: number
   acquiredAt?: Date
