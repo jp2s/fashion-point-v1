@@ -2,9 +2,7 @@ import { Piece } from './utils/types'
 import { PieceCardGrid } from './ui/PieceCard'
 import { Header } from './ui/Header'
 import { applyStylish } from "./utils/funcs"
-import { data as items} from './utils/data'
-
-const data: Array<Piece> = [...items, ...items, ...items]
+import { data } from './utils/data'
 
 const stylish = applyStylish({
   wrapper: ["container", "centerCenter", "column", "l0Container"],

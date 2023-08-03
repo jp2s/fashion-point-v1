@@ -1,6 +1,7 @@
 import { ChromaticsShowcase } from "./ChromaticsShowcase"
 import { Piece } from '../utils/types'
 import { applyStylish } from '../utils/funcs'
+import { DetailsShowcase } from "./DetailsShowcase"
  
 interface PropertyProps {
   name: string, 
@@ -15,8 +16,9 @@ interface PieceCardGridProps {
 
 const stylish = applyStylish({
   propertyContainer: ["container", "row", "l3Container", "betweenCenter", "fullWidth"],
+  pieceCardWrapper: ["card", "container", "column", "l2Container", "betweenCenter", "fullWidth", "grid"],
   propertyValue: ["regular", "endText"],
-  pieceCardContainer: ["card", "container", "column", "l2Container", "startCenter", "fullWidth", "grid"],
+  pieceCardContainer: ["container", "column", "l2Container", "startCenter", "fullWidth", "grid"],
   pieceCardGrid: ["container", "row", "l0Container", "wrap"]
 })
 
@@ -32,6 +34,7 @@ const PieceCard = ({ piece }: PieceCardProps) => {
     label,
     acquiredFrom,
     chromatics,
+    details,
     price,
     acquiredAt,
     category,
@@ -39,30 +42,35 @@ const PieceCard = ({ piece }: PieceCardProps) => {
   } = piece
 
   return (
-    <div className={stylish.pieceCardContainer}>
-      <ChromaticsShowcase chromatics={chromatics} />
+    <div className={stylish.pieceCardWrapper}>
+      <div className={stylish.pieceCardContainer}>
+        <ChromaticsShowcase chromatics={chromatics} />
 
-      <Property name="Label" value={label} />
+        <Property name="Label" value={label} />
       
-      <Property name="Acquired from" value={acquiredFrom} />
+        <Property name="Acquired from" value={acquiredFrom} />
+      
+        {price && (
+          <Property name="Price" value={`${price.toString()}€`} />
+        )}
 
-      {/* add component for details */}
-      
-      {price && (
-        <Property name="Price" value={`${price.toString()}€`} />
-      )}
+        {acquiredAt && (
+          <Property name="Acquired at" value={acquiredAt.toDateString()} />
+        )}
 
-      {acquiredAt && (
-        <Property name="Acquired at" value={acquiredAt.toDateString()} />
-      )}
+        {piece.kind === "Clothing" && (
+          <Property name="Laundry" value={piece.laundry} />
+        )}
+      
+        <Property name="Kind" value={kind} />
+      
+        <Property name="Category" value={category} />
 
-      {piece.kind === "Clothing" && (
-        <Property name="Laundry" value={piece.laundry} />
-      )}
+      </div>
       
-      <Property name="Kind" value={kind} />
-      
-      <Property name="Category" value={category} />
+      <div>
+        <DetailsShowcase details={details} />
+      </div>
     </div>
   )
 }
