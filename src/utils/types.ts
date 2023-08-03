@@ -41,3 +41,4 @@ export type AccessoryCategory =
   | "40"
   | "30"
   | "Wool"
+  | "unknown"

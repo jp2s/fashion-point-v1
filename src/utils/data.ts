@@ -23,7 +23,49 @@ const piece2: Accessory = {
   kind: "Accessory"
 }
 
-const piece3: Accessory = {
+const piece3: Clothing = {
+  label: "unknown",
+  acquiredFrom: "Think Twice Bonn",
+  chromatics: [colors.purple, colors.darkorchid, colors.darkgreen, colors.lightgreen, colors.gold, colors.silver],
+  details: ["long-sleeve", "really fancy", "sparkly details", "unique buttons"],
+  laundry: "unknown",
+  category: "Shirt",
+  kind: "Clothing"
+}
+
+const piece4: Clothing = {
+  label: "Monsieur FALK",
+  acquiredFrom: "Think Twice Bonn",
+  chromatics: [colors.peachpuff],
+  details: ["long-sleeve", "classy"],
+  laundry: "40",
+  category: "Shirt",
+  kind: "Clothing",
+}
+
+const piece5: Clothing = {
+  label: "Super Massive",
+  acquiredFrom: "TK Maxx Bonn",
+  chromatics: [colors.black, colors.turquoise, colors.pink, colors.orange],
+  details: ["short-sleeve", "fancy", "80s"],
+  price: 30,
+  laundry: "unknown",
+  category: "Shirt",
+  kind: "Clothing",
+}
+
+const piece6: Clothing = {
+  label: "Super Massive",
+  acquiredFrom: "TK Maxx Bonn",
+  chromatics: [colors.black, colors.yellow, colors.hotpink, colors.lightblue],
+  details: ["short-sleeve", "really fancy", "80s"],
+  price: 30,
+  laundry: "unknown",
+  category: "Shirt",
+  kind: "Clothing",
+}
+
+const piece7: Accessory = {
   label: "Linea Uomo H. Windsor",
   acquiredFrom: "Think Twice Bonn",
   chromatics: [colors.saddlebrown],
@@ -37,4 +79,8 @@ export const data: Array<Piece> = [
   piece1, 
   piece2,
   piece3,
+  piece4,
+  piece5,
+  piece6,
+  piece7,
 ]
