@@ -9,6 +9,7 @@ interface PropertyProps {
 }
 interface PieceCardProps {
   piece: Piece
+  mapKey?: string,
 }
 interface PieceCardGridProps {
   items: Array<Piece>
@@ -29,7 +30,7 @@ const Property = ({name, value}: PropertyProps) =>
     <div className={stylish.propertyValue}>{value}</div>
   </div>
 
-const PieceCard = ({ piece }: PieceCardProps) => {
+const PieceCard = ({ piece, mapKey}: PieceCardProps) => {
   const {
     label,
     acquiredFrom,
@@ -38,11 +39,11 @@ const PieceCard = ({ piece }: PieceCardProps) => {
     price,
     acquiredAt,
     category,
-    kind
+    kind,
   } = piece
 
   return (
-    <div className={stylish.pieceCardWrapper}>
+    <div className={stylish.pieceCardWrapper} key={mapKey}>
       <div className={stylish.pieceCardContainer}>
         <ChromaticsShowcase chromatics={chromatics} />
 
@@ -77,5 +78,10 @@ const PieceCard = ({ piece }: PieceCardProps) => {
 
 export const PieceCardGrid = ({items}: PieceCardGridProps) => 
   <div className={stylish.pieceCardGrid}>
-    {items.map((item: Piece) => <PieceCard piece={item} />)}
+    {items.map((item: Piece, index: number) => 
+      <PieceCard 
+        mapKey={`${item.label}-${item.category}-${item.acquiredFrom}-${index}`} 
+        piece={item} 
+      />
+    )}
   </div>

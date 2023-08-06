@@ -13,3 +13,5 @@ export const applyStylish = (stylish: Record<string, Array<string>>): Record<str
 }
 
 export const stylishChromatic = (chromatic: Color) => `rgb(${chromatic.toString()})`
+
+export const condCx = (condition: boolean, classNames: Array<string>): Array<string> => [...(condition ? classNames : [])]

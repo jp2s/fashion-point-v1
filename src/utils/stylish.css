@@ -21,6 +21,10 @@ html {
   border-radius: 5px; 
 }
 
+.whiteChromatic {
+  border: 2px solid black;
+}
+
 .headline {
   border-bottom: 12px solid hotpink;
 }

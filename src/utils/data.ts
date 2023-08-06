@@ -46,7 +46,7 @@ const piece4: Clothing = {
 const piece5: Clothing = {
   label: "Super Massive",
   acquiredFrom: "TK Maxx Bonn",
-  chromatics: [colors.black, colors.turquoise, colors.pink, colors.orange],
+  chromatics: [colors.white, colors.black, colors.turquoise, colors.pink, colors.orange],
   details: ["short-sleeve", "fancy", "80s"],
   price: 30,
   laundry: "unknown",
@@ -70,9 +70,22 @@ const piece7: Accessory = {
   acquiredFrom: "Think Twice Bonn",
   chromatics: [colors.saddlebrown],
   details: ["for suits", "classy", "thin laces"],
-    price: 15,
+  price: 15,
+  acquiredAt: new Date("August 3, 2023"),
   category: "Shoes",
   kind: "Accessory",
+}
+
+const piece8: Clothing = {
+  label: "Tommy Hilfiger",
+  acquiredFrom: "Flohmarkt Hamburg Sternschanze",
+  chromatics: [colors.midnightblue, colors.skyblue, colors.firebrick, colors.white],
+  details: ["long-sleeve", "cozy", "casual", "simple"],
+  price: 6,
+  acquiredAt: new Date("August 5, 2023"),
+  category: "Shirt",
+  kind: "Clothing",
+  laundry: "40",
 }
 
 export const data: Array<Piece> = [
@@ -83,4 +96,5 @@ export const data: Array<Piece> = [
   piece5,
   piece6,
   piece7,
+  piece8,
 ]
