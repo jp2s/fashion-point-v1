@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import './utils/stylish.css'
+import './stylish/general.css'
+import './stylish/flexbox.css'
+import './stylish/typography.css'
 import { App } from './App';
 
 const root = ReactDOM.createRoot(

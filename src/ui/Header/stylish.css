@@ -1,0 +1,21 @@
+.wrapper {
+  gap: 11px;
+  margin-bottom: 46px;
+}
+
+.headline {
+  font-size: 96px;
+  font-weight: bold;
+  border-bottom: 8px solid hotpink;
+}
+
+.subline {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.lick {
+  right: -49px;
+  bottom: -84px;
+  font-size: 140px;
+}

@@ -1,4 +1,5 @@
-import { applyStylish } from "../utils/funcs"
+import "./stylish.css"
+import { applyStylish } from "../../utils/funcs"
 
 interface Props {
   details: Array<string>

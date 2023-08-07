@@ -1,0 +1,9 @@
+.chromatic {
+  width: 50px;
+  height: 15px;
+  border-radius: 5px; 
+}
+
+.whiteChromatic {
+  border: 2px solid black;
+}

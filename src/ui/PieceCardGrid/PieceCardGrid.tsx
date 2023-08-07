@@ -1,7 +1,8 @@
-import { ChromaticsShowcase } from "./ChromaticsShowcase"
-import { Piece } from '../utils/types'
-import { applyStylish } from '../utils/funcs'
-import { DetailsShowcase } from "./DetailsShowcase"
+import "./stylish.css"
+import { ChromaticsShowcase } from "../ChromaticsShowcase/ChromaticsShowcase"
+import { Piece } from '../../utils/types'
+import { DetailsShowcase } from "../DetailsShowcase/DetailsShowcase"
+import { applyStylish } from '../../utils/funcs'
  
 interface PropertyProps {
   name: string, 
@@ -18,14 +19,15 @@ interface PieceCardGridProps {
 const stylish = applyStylish({
   propertyContainer: ["container", "row", "l3Container", "betweenCenter", "fullWidth"],
   pieceCardWrapper: ["card", "container", "column", "l2Container", "betweenCenter", "fullWidth", "grid"],
-  propertyValue: ["regular", "endText"],
+  propertyName: ["bold"],
+  propertyValue: ["endText"],
   pieceCardContainer: ["container", "column", "l2Container", "startCenter", "fullWidth", "grid"],
   pieceCardGrid: ["container", "row", "l0Container", "wrap"]
 })
 
 const Property = ({name, value}: PropertyProps) => 
   <div className={stylish.propertyContainer}>
-    <div>{name}:</div>
+    <div className={stylish.propertyName}>{name}:</div>
 
     <div className={stylish.propertyValue}>{value}</div>
   </div>

@@ -1,0 +1,75 @@
+.header0 {
+  font-size: 96px;
+}
+.header1 {
+  font-size: 52px;
+}
+.header2 {
+  font-size: 39px;
+}
+.body1 {
+  font-size: 26px;
+}
+.body2 {
+  font-size: 13px; 
+}
+
+.startText {
+  text-align: start;
+}
+.centerText {
+  text-align: center;
+}
+.endText {
+  text-align: end;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@font-face {
+    font-family: "appleGaramondBoldItalic";
+    src: url("../assets/fonts/apple_garamond/AppleGaramond-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: "appleGaramond";
+    src: url("../assets/fonts/apple_garamond/AppleGaramond.ttf");
+}
+
+@font-face {
+    font-family: "jetBrainsMono";
+    src: url("../assets/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "miami";
+    src: url("../assets/fonts/sabeny_betranss/Sabeny Betranss.ttf");
+}
+
+@font-face {
+    font-family: "nirv";
+    src: url("../assets/fonts/nirv/nirv.TTF");
+}
+
+
+.agbi {
+  font-family: appleGaramondBoldItalic;
+}
+
+.ag {
+  font-family: appleGaramond; 
+}
+
+.code {
+  font-family: jetBrainsMono;
+}
+
+.miami {
+  font-family: miami;
+}
+
+.nirv {
+  font-family: nirv;
+}

@@ -1,6 +1,5 @@
-import { Piece } from './utils/types'
-import { PieceCardGrid } from './ui/PieceCard'
-import { Header } from './ui/Header'
+import { PieceCardGrid } from './ui/PieceCardGrid/PieceCardGrid'
+import { Header } from './ui/Header/Header'
 import { applyStylish } from "./utils/funcs"
 import { data } from './utils/data'
 

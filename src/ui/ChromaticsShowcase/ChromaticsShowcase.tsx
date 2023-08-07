@@ -1,6 +1,7 @@
 import color, { RGB as Color } from 'color-name'
 
-import { applyStylish, stylishChromatic, condCx} from '../utils/funcs'
+import "./stylish.css"
+import { applyStylish, stylishChromatic, condCx} from '../../utils/funcs'
 
 interface Props {
   chromatics: Array<Color>
