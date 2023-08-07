@@ -41,7 +41,7 @@ const PieceCard = ({ piece, mapKey}: PieceCardProps) => {
     price,
     acquiredAt,
     category,
-    kind,
+    laundry
   } = piece
 
   return (
@@ -61,11 +61,9 @@ const PieceCard = ({ piece, mapKey}: PieceCardProps) => {
           <Property name="Acquired at" value={acquiredAt.toDateString()} />
         )}
 
-        {piece.kind === "Clothing" && (
-          <Property name="Laundry" value={piece.laundry} />
+        {laundry && (
+          <Property name="Laundry" value={laundry} />
         )}
-      
-        <Property name="Kind" value={kind} />
       
         <Property name="Category" value={category} />
 

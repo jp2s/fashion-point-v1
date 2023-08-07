@@ -1,35 +1,23 @@
 import { RGB as Color } from "color-name"
 
-export interface BasePiece {
+export interface Piece {
   label: string
   acquiredFrom: string
   chromatics: Array<Color>
   details: Array<string>
   price?: number
   acquiredAt?: Date
-  category: ClothingCategory | AccessoryCategory
+  laundry?: Laundry
+  category: Category
 }
 
-export type Clothing = BasePiece & {
-  kind: "Clothing"
-  laundry: Laundry
-}
-
-export type Accessory = BasePiece & {
-  kind: "Accessory"
-}
-
-export type Piece = Clothing | Accessory
-
-export type ClothingCategory =
+export type Category =
   | "Socks"
   | "Pants"
   | "Shirt"
   | "Tee"
   | "Jacket"
   | "Sweater"
-
-export type AccessoryCategory =
   | "Tie"
   | "Hat"
   | "Belt"
